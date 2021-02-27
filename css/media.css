@@ -1,0 +1,86 @@
+@media (max-width: 768px) {
+    .navigation ul {
+        width: 40%;
+        padding: 24px;
+        display: block;
+        position: fixed;
+        height: 100%;
+        left: -250px;
+        top: -500px;
+        transition: all ease 0.5s;
+    }
+    .navigation ul li{
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
+    .navigationIcon{
+        border: 2px solid #000000;
+        border-radius: 5px;
+        position: relative;
+        width: 60px;
+        height: 50px;
+        display: inline-block;
+        padding: 7px;
+        cursor: pointer;
+        transition: all ease-in-out 0.3s ;
+        left: 0;
+    }
+    .line{
+        background: #000000;
+        width: 77%;
+        display: block;
+        height: 5px;
+        border-radius: 3px;
+        position: absolute;
+        transition: all cubic-bezier(0.25, 0.1, 0.27, 1.55 ) 0.35s ;
+    }
+    .top{
+        top: 21%;
+    }
+    .mid{
+        top: 45%;
+    }
+    .bot{
+        top: 70%;
+    }
+    .navigationIcon.open{
+        left: 47%;
+    }
+    .navigationIcon.open .top{
+        transform: rotate(45deg);
+        top: 47%;
+    }
+    .navigationIcon.open .mid, .navigationIcon.open .bot{
+        transform: rotate(-45deg);
+        top: 47%;
+    }
+    .navigation ul.nav-open{
+        left: 0;
+        top: 0;
+    }
+    .navigation ul .menu-sub{
+        width: 100%;
+        left: 0;
+        height: auto;
+        display: none;
+        top: auto;
+        padding-top: 0;
+        padding-left: 34px;
+        opacity: 1;
+        position: relative;
+        padding-bottom: 0;
+    }
+    .navigation ul li:hover .menu-sub{
+        top: auto;
+    }
+    .navigation ul li .menu-sub.show{
+        display: block;
+    }
+    .navigation #menuList li.act{
+        border: none;
+    }
+    .active{
+        border: none;
+    }
+}
